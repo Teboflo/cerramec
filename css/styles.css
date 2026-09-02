@@ -1,0 +1,549 @@
+:root {
+    --main: #fff;
+    --text: #000;
+    --subtext: #4c5759;
+    --underline: #8e908f;
+    --secondary: #1569b8;
+    --whatsapp: #25D366;
+}
+
+.hero-section {
+    width: 100%;
+    height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--text);
+    overflow: hidden;
+}
+
+.slider-contenedor {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.slide-track {
+    display: flex;
+    width: 400%;
+    height: 100%;
+    transition: transform 0.4s ease-in-out;
+}
+
+.slide {
+    width: 25%;
+    height: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sliderBtns {
+    position: absolute;
+    width: 100%;
+    height: 80px;
+    top: 50%;
+    transform: translate(0%, -50%);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 40px;
+}
+
+.btnArrow {
+    border: none;
+    outline: none;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    background: none;
+}
+
+.btnArrow svg {
+    color: var(--underline);
+    width: 60px;
+    height: 60px;
+}
+
+.btnArrow:hover svg {
+    color: var(--secondary);
+}
+
+.about-section {
+    width: 100%;
+    height: 50vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-section .title {
+    font-size: 30px;
+    width: 100%;
+    text-align: center;
+    color: var(--secondary);
+    font-weight: 700;
+}
+
+.about-section .text {
+    font-size: 16px;
+    color: var(--subtext);
+    width: 65%;
+    text-align: center;
+}
+
+.about-section .text u {
+    color: var(--text);
+    text-decoration: none;
+}
+
+.catalogo-section {
+    width: 100%;
+    height: 75vh;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.catalogo-section>.title {
+    font-size: 30px;
+    color: var(--text);
+    font-weight: 700;
+    text-align: center;
+}
+
+.catalogo {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardProducto {
+    position: relative;
+    width: 30%;
+    height: 100%;
+    background: var(--subtext);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+    transition: ease-in 0.3s;
+}
+
+.cardProducto:hover {
+    transform: scale(1.03);
+}
+
+.cardProducto .title {
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 20px;
+    text-transform: uppercase;
+    z-index: 1;
+}
+
+.cardProducto .checkCta {
+    width: 100%;
+    height: 50px;
+    background: var(--secondary);
+    color: var(--main);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 0px 0px 8px 8px;
+    font-size: 16px;
+    z-index: 1;
+}
+
+.checkCta:hover {
+    color: var(--text);
+    background: var(--underline);
+}
+
+
+.cardProducto img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.feature-section {
+    width: 100%;
+    height: 75vh;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px 20px;
+}
+
+.feature-section .title {
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    color: var(--secondary);
+}
+
+.features {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.feature {
+    width: 35%;
+    height: 49%;
+    border: 2px solid var(--subtext);
+    border-radius: 8px;
+    padding: 10px 20px;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-self: center;
+    cursor: pointer;
+    transition: ease-in.1s;
+}
+
+.feature:nth-child(2),
+.feature:nth-child(3) {
+    background: var(--underline);
+    color: var(--text);
+}
+
+
+.feature:nth-child(2) .icono svg,
+.feature:nth-child(3) .icono svg {
+    color: var(--text);
+}
+
+.feature:nth-child(2) .subtitle,
+.feature:nth-child(3) .subtitle {
+    color: var(--text);
+}
+
+.feature .icono {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 3px 3px 30px rgba(0, 0, 0, 0.9);
+}
+
+.feature .icono svg {
+    width: 30px;
+    height: 30px;
+    color: var(--subtext);
+}
+
+.feature .subtitle {
+    margin-top: 5px;
+    font-size: 16px;
+    font-weight: 600px;
+    color: var(--subtext);
+}
+
+.feature .copy {
+    font-size: 16px;
+}
+
+.feature:hover {
+    transform: scale(1.03);
+}
+
+.data-section {
+    width: 100%;
+    height: 50vh;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.data-section .title {
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    color: var(--text);
+}
+
+.data-blog {
+    width: 90%;
+    height: 90%;
+    display: flex;
+    gap: 40px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.data-blog .copy {
+    width: 50%;
+    height: 100%;
+    text-align: justify;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+}
+
+.data-blog .metrics {
+    width: 50%;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.metrics li {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    justify-content: flex-start;
+    align-items: center;
+    color: var(--subtext);
+    font-size: 14px;
+}
+
+.metrics li svg {
+    width: 35px;
+    height: 35px;
+    padding: 3px;
+    border-radius: 50%;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.95);
+    color: var(--subtext);
+}
+
+@media (max-width:1024px) {
+    .hero-section {
+        width: 100%;
+        height: 30vh;
+    }
+
+    .sliderBtns {
+        padding: 0px 30px;
+    }
+
+    .about-section {
+        height: 25vh;
+        padding: 20px;
+        gap: 30px;
+    }
+
+    .about-section .text {
+        width: 70%;
+    }
+
+    .catalogo-section {
+        height: 35vh;
+    }
+
+    .catalogo {
+        width: 100%;
+        height: 80%;
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .feature-section {
+        height: 35vh;
+    }
+
+    .data-section {
+        height: 25vh;
+    }
+}
+
+
+@media (max-width:768px) {
+    .hero-section {
+        height: 20vh;
+    }
+
+    .slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .sliderBtns {
+        padding: 0px 5px;
+    }
+
+    .btnArrow {
+        width: 50px;
+        height: 50px;
+    }
+
+    .btnArrow svg {
+        width: 30px;
+        height: 30px;
+    }
+
+    .about-section {
+        width: 100%;
+        height: 50vh;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .about-section .title {
+        font-size: 20px;
+    }
+
+    .about-section .text {
+        font-size: 14px;
+        width: 90%;
+        text-align: justify;
+    }
+
+    .catalogo-section {
+        height: 100vh;
+    }
+
+    .catalogo-section>.title {
+        font-size: 20px;
+    }
+
+    .catalogo {
+        height: 90%;
+        flex-direction: column;
+    }
+
+    .cardProducto {
+        width: 80%;
+        height: 30%;
+    }
+
+    .cardProducto .title {
+        font-size: 14px;
+        margin-top: 10px;
+    }
+
+    .cardProducto .checkCta {
+        width: 100%;
+        height: 40px;
+        font-size: 14px;
+    }
+
+    .cardProducto img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .feature-section {
+        width: 100%;
+        height: 75vh;
+    }
+
+    .feature-section .title {
+        font-size: 20px;
+    }
+
+    .features {
+        width: 100%;
+        height: 85%;
+        gap: 10px;
+    }
+
+    .feature {
+        width: 48%;
+        height: 49%;
+        padding: 5px 10px;
+    }
+
+    .feature .icono {
+        width: 40px;
+        height: 40px;
+    }
+
+    .feature .subtitle {
+        font-size: 14px;
+    }
+
+    .feature .copy {
+        font-size: 14px;
+    }
+
+    .feature:hover {
+        transform: scale(1.03);
+    }
+
+    .data-section {
+        height: 50vh;
+        padding: 10px 20px;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .data-section .title {
+        font-size: 20px;
+    }
+
+    .data-blog {
+        width: 90%;
+        height: 90%;
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .data-blog .copy {
+        width: 100%;
+        height: 50%;
+        text-align: justify;
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+    }
+
+    .data-blog .metrics {
+        width: 100%;
+        height: 50%;
+    }
+
+    .metrics li {
+        gap: 15px;
+    }
+}
