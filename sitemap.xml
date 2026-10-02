@@ -6,4 +6,9 @@
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
+
+  <url><loc>https://cerramec.com/pages/productos.html</loc></url>
+  <url><loc>https://cerramec.com/pages/soluciones.html</loc></url>
+    <url><loc>https://cerramec.com/pages/trayectoria.html</loc></url>
+  <url><loc>https://cerramec.com/pages/ubicacion.html</loc></url>
 </urlset>
